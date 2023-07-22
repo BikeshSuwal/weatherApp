@@ -34,7 +34,8 @@ function App() {
           </h1>
           <div className="maincard">
               <div className="up">
-                <div className="location">{data.name ? data.name : 'Location'}</div>
+                <div className="location">{data.name ? data.name : 'Location'}
+                </div>
                 <div className="searchbar">
                   <input value={location} onChange={event => setLocation(event.target.value)} placeholder="Enter Location" onKeyDown={event => searchLocation(event)} type="text" className="text" />
                 </div>
@@ -50,7 +51,7 @@ function App() {
                     </div>
                     <div className="tempValues">
                       <div className="mainTemp">{data.main ? (data.main.temp-273).toFixed(1) + '°C' : null}</div>
-                      <div className="otherTemp"><div className="minTemp"></div>Min: {data.main ? (data.main.temp_min-273).toFixed(1) + '°F' : null}<div className="maxTemp">Max: {data.main ? (data.main.temp_max-273).toFixed(1) + '°F' : null}</div></div>
+                      <div className="otherTemp"><div className="minTemp"></div>Min: {data.main ? (data.main.temp_min-273).toFixed(1) + '°C' : null}<div className="maxTemp">Max: {data.main ? (data.main.temp_max-273).toFixed(1) + '°C' : null}</div></div>
                     </div>
                   </div>
 
